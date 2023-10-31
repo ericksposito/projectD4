@@ -1,9 +1,7 @@
 
-import { app } from './server';
-
 import { Router, Request, Response } from 'express';
 
-import { Character } from './types/types';
+import { Character } from '../types/types';
 
 const player = new Character('Druida', 80,10,10,60);
 
