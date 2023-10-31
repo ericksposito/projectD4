@@ -1,23 +1,12 @@
 
-import express, { Router, Request, Response } from 'express';
+import express from 'express';
 
-import { Character } from './types/types';
+import { route } from './routes';
 
-const player = new Character('Druida', 80,10,10,60);
-
-console.log(player);
-
-const app = express();
-
-const route = Router()
+export const app = express();
 
 app.use(express.json())
 
-route.get('/', (req: Request, res: Response) => {
-  res.json({ message: 'hello world with Typescript' })
-})
-
 app.use(route)
-
 
 app.listen(3333, () => 'server running on port 3333')
