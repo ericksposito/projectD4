@@ -1,6 +1,11 @@
-import express from 'express'
 
-import { Router, Request, Response } from 'express';
+import express, { Router, Request, Response } from 'express';
+
+import { Character } from './types/types';
+
+const player = new Character('Druida', 80,10,10,60);
+
+console.log(player);
 
 const app = express();
 
